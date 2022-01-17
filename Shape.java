@@ -7,7 +7,10 @@ public class Shape implements ShapeInterface {
    protected int Width;
    protected int Depth;
    protected int Radius;
-   private int Diameter;
+   protected double radius;
+   protected int DiagonalOne;
+   protected int DiagonalTwo;
+   
 
    public Shape(double Volume, int SurfaceArea, int Height, int Width, int Depth){
        this.Volume = Volume;
@@ -32,6 +35,15 @@ public class Shape implements ShapeInterface {
    public int GetDepth(){
        return this.Depth;
    }
+   public int GetRadius(){
+       return this.Radius;
+   }
+   public int GetDiagonalOne(){
+       return this.DiagonalOne;
+   }
+   public int GetDiagonalTwo(){
+       return this.DiagonalTwo;
+   }
 
    public Shape(int Height, int Width, int Depth){
        this.Height = Height;
@@ -43,4 +55,23 @@ public class Shape implements ShapeInterface {
        this.Height = Height;
        this.Radius = Radius;
    }
+
+   public Shape(int Width){
+       this.Width = Width;
+   }
+
+   public Shape(double radius){
+       this.radius = radius;
+   }
+
+   public Shape(int Height, int Width, int Depth, int DiagonalOne, int DiagonalTwo){
+       this.Height = Height;
+       this.Width = Width;
+       this.Depth = Depth;
+       this.DiagonalOne = DiagonalOne;
+       this.DiagonalTwo = DiagonalTwo;
+   }
+
+   
+  
 }
