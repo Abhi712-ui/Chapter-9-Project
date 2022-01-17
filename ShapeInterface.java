@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public interface ShapeInterface {
-    public void genericVolume(int base, int height);
-    public void genericSurfaceArea(int NumberOfFaces);
+    public double GetVolume();
+    public double GetSurfaceArea();
+    public int GetHeight();
+    public int GetWidth();
+    public int GetDepth();
 }
