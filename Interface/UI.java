@@ -8,7 +8,7 @@ public class UI extends JFrame {
     static JLabel l;
 
     public static void main(String[] args){
-        f = new JFrame("panel");
+        f = new JFrame("Shape Selection Page");
         l = new JLabel("Shape Volume and Surface Area Calculator");
         Cone = new JButton("Cone");
         Cube = new JButton("Cube");
