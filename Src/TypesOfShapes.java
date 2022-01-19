@@ -1,3 +1,4 @@
+package Src;
 public enum TypesOfShapes {
     CONE,
     CUBE,

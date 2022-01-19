@@ -1,3 +1,4 @@
+package Interface;
 // **************************************************************************
 // put this file into a project src folder (same as your project's .java file
 // change the package name below to match the package name of your project.

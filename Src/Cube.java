@@ -1,3 +1,4 @@
+package Src;
 public class Cube extends Shape{
     public Cube(int Width){
         super(Width);

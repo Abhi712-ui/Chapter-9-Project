@@ -1,3 +1,4 @@
+package Src;
 public class TriangularPrism extends Shape {
     public TriangularPrism(int Height, int Width, int Depth, int DiagonalOne, int DiagonalTwo){
         super(Height, Width, Depth, DiagonalOne, DiagonalTwo);
