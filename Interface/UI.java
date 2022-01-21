@@ -1,33 +1,62 @@
 package Interface;
+import Interface.DrawingPanel;
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-public class UI extends JFrame {
-    static JFrame f;
-    static JButton Cone, Cube, Cylinder, RectangularPrism, Sphere, TriangularPrism;
-    static JLabel l;
+import java.util.Scanner;
 
-    public static void main(String[] args){
-        f = new JFrame("Shape Selection Page");
-        l = new JLabel("Shape Volume and Surface Area Calculator");
-        Cone = new JButton("Cone");
-        Cube = new JButton("Cube");
-        Cylinder = new JButton("Cylinder");
-        RectangularPrism = new JButton("Rectangular Prism");
-        Sphere = new JButton("Sphere");
-        TriangularPrism = new JButton("Triangular Prism");
-        JPanel p = new JPanel();
-        p.add(Cone);
-        p.add(Cube);
-        p.add(Cylinder);
-        p.add(RectangularPrism);
-        p.add(Sphere);
-        p.add(TriangularPrism);
-        p.add(l);
-        p.setBackground(Color.LIGHT_GRAY);
-        f.add(p);
-        f.setSize(300, 300);
-        f.show();
+import Src.Cone;
+import Src.Cube;
+import Src.Cylinder;
+import Src.RectangularPrism;
+import Src.Sphere;
+import Src.TriangularPrism;
+import Src.TypesOfShapes;
+
+public class UI {
+    public static void display(String Solution){
+        DrawingPanel a = new DrawingPanel(500, 500);
+        Graphics B = a.getGraphics();
+        B.setColor(Color.LIGHT_GRAY);
+        a.setBackground(Color.BLACK);
+        B.drawString(Solution, 50, 50);
+    }
+
+    public static void choose(String a){
+        switch (a){
+            case "1":  a.equals("CONE");
+                     int[] Conevalues = Cone.create();
+                     Cone ConeSample = new Cone(Conevalues[0], Conevalues[1]);
+                     display(ConeSample.toString());
+                     break;
+            case "2":  a = TypesOfShapes.CUBE.toString();
+                     int[] Cubevalues = Cube.create();
+                     Cube CubeSample = new Cube(Cubevalues[0]);
+                     display(CubeSample.toString());
+                     break;
+            case "3":  a = TypesOfShapes.CYLINDER.toString();
+                     int[] CylinderValues = Cylinder.create();
+                     Cylinder CylinderSample = new Cylinder(CylinderValues[0], CylinderValues[1]);
+                     display(CylinderSample.toString());
+                     break;
+            case "4":  a = TypesOfShapes.RECTANGULARPRISM.toString();
+                     int[] RectangularPrismValues = RectangularPrism.create();
+                     RectangularPrism RectangularPrismSample = new RectangularPrism(RectangularPrismValues[0], RectangularPrismValues[1], RectangularPrismValues[2]);
+                     display(RectangularPrismSample.toString());
+                     break;
+            case "5":  a = TypesOfShapes.SPHERE.toString();
+                     int[] SphereValues = Sphere.create();
+                     Sphere SphereSample = new Sphere(SphereValues[0]);
+                     display(SphereSample.toString());
+                     break;
+            case "6":  a = TypesOfShapes.TRIANGULARPRISM.toString();
+                     int[] TriangularPrismValues = TriangularPrism.create();
+                     TriangularPrism TriangularPrismSample = new TriangularPrism(TriangularPrismValues[0], TriangularPrismValues[1], TriangularPrismValues[2], 
+                     TriangularPrismValues[3], TriangularPrismValues[4]);
+                     display(TriangularPrismSample.toString());
+                     break;
+            default:
+            System.out.println("Invalid values, please provide an available shape");
+            break;
+        }
     }
 }
 
