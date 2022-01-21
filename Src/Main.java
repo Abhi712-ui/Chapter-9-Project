@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 import Interface.*;
 import Src.TypesOfShapes;
+
+import static Interface.UI.display;
+
 public class Main {
     public static void main(String[] args){
         Scanner z = new Scanner(System.in);
@@ -15,4 +18,6 @@ public class Main {
     public static void Opening(){
 
     }
+
+
 }
