@@ -13,7 +13,7 @@ public class Shape implements ShapeInterface {
    protected int DiagonalTwo;
    
 
-   public Shape(double Volume, int SurfaceArea, int Height, int Width, int Depth){
+   public Shape(double Volume, double SurfaceArea, int Height, int Width, int Depth){
        this.Volume = Volume;
        this.SurfaceArea = SurfaceArea;
        this.Height = Height;

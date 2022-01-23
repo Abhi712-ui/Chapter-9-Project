@@ -23,32 +23,32 @@ public class UI {
     public static void choose(String a){
         TypesOfShapes shape = TypesOfShapes.valueOf(a);
         switch (shape){
-            case CONE:  a.equals("CONE");
+            case CONE:
                      int[] Conevalues = Cone.create();
                      Cone ConeSample = new Cone(Conevalues[0], Conevalues[1]);
                      display(ConeSample.toString());
                      break;
-            case CUBE:  a = TypesOfShapes.CUBE.toString();
+            case CUBE:
                      int[] Cubevalues = Cube.create();
                      Cube CubeSample = new Cube(Cubevalues[0]);
                      display(CubeSample.toString());
                      break;
-            case CYLINDER:  a = TypesOfShapes.CYLINDER.toString();
+            case CYLINDER:
                      int[] CylinderValues = Cylinder.create();
                      Cylinder CylinderSample = new Cylinder(CylinderValues[0], CylinderValues[1]);
                      display(CylinderSample.toString());
                      break;
-            case RECTANGULARPRISM:  a = TypesOfShapes.RECTANGULARPRISM.toString();
+            case RECTANGULARPRISM:
                      int[] RectangularPrismValues = RectangularPrism.create();
                      RectangularPrism RectangularPrismSample = new RectangularPrism(RectangularPrismValues[0], RectangularPrismValues[1], RectangularPrismValues[2]);
                      display(RectangularPrismSample.toString());
                      break;
-            case SPHERE:  a = TypesOfShapes.SPHERE.toString();
+            case SPHERE:
                      int[] SphereValues = Sphere.create();
                      Sphere SphereSample = new Sphere(SphereValues[0]);
                      display(SphereSample.toString());
                      break;
-            case TRIANGULARPRISM:  a = TypesOfShapes.TRIANGULARPRISM.toString();
+            case TRIANGULARPRISM:
                      int[] TriangularPrismValues = TriangularPrism.create();
                      TriangularPrism TriangularPrismSample = new TriangularPrism(TriangularPrismValues[0], TriangularPrismValues[1], TriangularPrismValues[2], 
                      TriangularPrismValues[3], TriangularPrismValues[4]);

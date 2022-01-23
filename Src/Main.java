@@ -1,10 +1,6 @@
 package Src;
 import java.util.Scanner;
-
 import Interface.*;
-import Src.TypesOfShapes;
-
-import static Interface.UI.display;
 
 public class Main {
     public static void main(String[] args){
