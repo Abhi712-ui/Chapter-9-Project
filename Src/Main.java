@@ -13,11 +13,9 @@ public class Main {
         String b = z.nextLine();
         String c = b.toUpperCase();
         String d = c.trim();
-        UI.choose("CONE");
+        UI.choose(d);
     }
-    public static void Opening(){
 
-    }
 
 
 }
